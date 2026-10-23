@@ -1,0 +1,202 @@
+/*
+ * Layout is taken 1:1 from the Figma "iPhone 17" frame (402 x 2139).
+ * --u is one Figma pixel, so the page scales proportionally on any phone
+ * width and is pixel-exact at 402px.
+ */
+.page {
+  --u: calc(min(100vw, 402px) / 402);
+  width: calc(402 * var(--u));
+  margin: 0 auto;
+  padding-bottom: calc(81 * var(--u));
+  letter-spacing: -0.07em;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: calc(81 * var(--u)) calc(31 * var(--u)) 0;
+}
+
+.heroImage {
+  position: relative;
+  width: calc(278 * var(--u));
+  height: calc(278 * var(--u));
+  margin: 0 auto;
+  border-radius: calc(30 * var(--u));
+  overflow: hidden;
+}
+
+/* Figma crop: image is full width, 177.78% tall, shifted up 37.41% */
+.heroImage img {
+  position: absolute;
+  left: 0;
+  top: -37.41%;
+  width: 100%;
+  height: 177.78%;
+  max-width: none;
+}
+
+.display {
+  width: calc(340 * var(--u));
+  margin-top: calc(95 * var(--u));
+  font-size: calc(48.329 * var(--u));
+  font-weight: 600;
+  line-height: 0.8066;
+}
+
+.tagline {
+  margin-top: calc(72 * var(--u));
+  font-size: calc(15 * var(--u));
+  font-weight: 600;
+  line-height: 1.202;
+  white-space: nowrap;
+}
+
+.bio {
+  width: calc(328 * var(--u));
+  margin-top: calc(62 * var(--u));
+  font-size: calc(15 * var(--u));
+  line-height: 1.25;
+}
+
+.resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(340 * var(--u));
+  height: calc(42.737 * var(--u));
+  margin-top: calc(44.75 * var(--u));
+  background: #000;
+  color: #fff;
+  border: calc(0.95 * var(--u)) solid #000;
+  border-radius: calc(25.642 * var(--u));
+  font-size: calc(14.307 * var(--u));
+  font-weight: 600;
+  line-height: 1.202;
+  transition: opacity 150ms ease;
+}
+
+.resume:active {
+  opacity: 0.8;
+}
+
+/* ---------- Works ---------- */
+
+.works {
+  width: calc(309 * var(--u));
+  margin: calc(140.26 * var(--u)) 0 0 calc(46 * var(--u));
+}
+
+.obsessions {
+  margin-top: calc(112.8 * var(--u));
+}
+
+.worksHeader {
+  position: relative;
+  height: calc(50 * var(--u));
+}
+
+.obsessionsHeader {
+  height: calc(47 * var(--u));
+}
+
+.worksTitle {
+  width: calc(153 * var(--u));
+  font-size: calc(20.857 * var(--u));
+  font-weight: 600;
+  line-height: 1.202;
+}
+
+.worksSubtitle {
+  position: absolute;
+  top: calc(23 * var(--u));
+  right: 0;
+  width: calc(87 * var(--u));
+  font-size: calc(10 * var(--u));
+  line-height: 1.202;
+  text-align: right;
+}
+
+.browse {
+  display: flex;
+  align-items: center;
+  margin-top: calc(24 * var(--u));
+  font-size: calc(14.31 * var(--u));
+  font-weight: 600;
+  line-height: 1.202;
+}
+
+.browseRight {
+  justify-content: flex-end;
+  gap: calc(10 * var(--u));
+}
+
+.browseLeft {
+  gap: calc(10.9 * var(--u));
+}
+
+.arrow,
+.arrowFlipped {
+  display: block;
+  width: calc(116.1 * var(--u));
+  height: calc(12.842 * var(--u));
+  margin-top: calc(3.2 * var(--u));
+  transition: transform 200ms ease;
+}
+
+.arrowFlipped {
+  transform: scaleX(-1);
+}
+
+.browseRight:active .arrow {
+  transform: translateX(calc(6 * var(--u)));
+}
+
+.browseLeft:active .arrowFlipped {
+  transform: scaleX(-1) translateX(calc(6 * var(--u)));
+}
+
+/* ---------- Experience ---------- */
+
+.experience {
+  padding: calc(137.8 * var(--u)) calc(31 * var(--u)) 0;
+}
+
+.experienceImage {
+  position: relative;
+  width: calc(278 * var(--u));
+  height: calc(278 * var(--u));
+  margin: 0 auto;
+  border-radius: calc(30 * var(--u));
+  overflow: hidden;
+}
+
+.experienceImage img {
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.role {
+  margin-top: calc(70 * var(--u));
+  font-size: calc(24.1 * var(--u));
+  font-weight: 600;
+  line-height: 1.202;
+}
+
+.roleMeta {
+  display: flex;
+  justify-content: space-between;
+  width: calc(327 * var(--u));
+  margin-top: calc(6 * var(--u));
+  font-size: calc(15 * var(--u));
+  font-weight: 500;
+  line-height: 1.202;
+}
+
+.roleDescription {
+  width: calc(328 * var(--u));
+  margin-top: calc(29 * var(--u));
+  font-size: calc(15 * var(--u));
+  line-height: 1.25;
+  text-align: justify;
+}
