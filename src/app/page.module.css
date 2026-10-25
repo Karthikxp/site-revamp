@@ -14,7 +14,7 @@
 /* ---------- Hero ---------- */
 
 .hero {
-  padding: calc(81 * var(--u)) calc(31 * var(--u)) 0;
+  padding: calc(75 * var(--u)) calc(31 * var(--u)) 0;
 }
 
 .heroImage {
