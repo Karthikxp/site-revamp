@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ResumeButton from "./ResumeButton";
 import styles from "./page.module.css";
 
 function BrowseLink({ href, direction }: { href: string; direction: "left" | "right" }) {
@@ -45,9 +46,7 @@ export default function Home() {
           Im a UI/UX designer, a cybersecurity analyst, DO Engineer and a Front End developer,
           bridging aesthetics, security, and functionality.
         </p>
-        <a href="#" className={styles.resume}>
-          GET RESUME
-        </a>
+        <ResumeButton className={styles.resume} />
       </section>
 
       <section className={styles.works}>
@@ -78,7 +77,7 @@ export default function Home() {
         <h2 className={styles.display}>RELEVANT EXPERIENCE</h2>
         <h3 className={styles.role}>DevOps Engineer</h3>
         <div className={styles.roleMeta}>
-          <span>Associate Software Engineer, Celestica Inc</span>
+          <span>Celestica Inc</span>
           <span>(2026 - )</span>
         </div>
         <p className={styles.roleDescription}>
