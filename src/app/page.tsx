@@ -78,7 +78,7 @@ export default function Home() {
         <h2 className={styles.display}>RELEVANT EXPERIENCE</h2>
         <h3 className={styles.role}>DevOps Engineer</h3>
         <div className={styles.roleMeta}>
-          <span>Intern</span>
+          <span>Associate Software Engineer, Celestica Inc</span>
           <span>(2026 - )</span>
         </div>
         <p className={styles.roleDescription}>
