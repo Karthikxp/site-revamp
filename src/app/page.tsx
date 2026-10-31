@@ -32,11 +32,11 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroImage}>
           <Image
-            src="/images/hero.jpg"
+            src="/images/hero-cat.jpg"
             alt="Karthik Manikandan"
-            width={1080}
-            height={1920}
-            sizes="(max-width: 402px) 70vw, 278px"
+            width={736}
+            height={736}
+            sizes="(max-width: 402px) 80vw, 323px"
             priority
           />
         </div>
@@ -66,14 +66,22 @@ export default function Home() {
       </section>
 
       <section className={styles.experience}>
-        <div className={styles.experienceImage}>
+        <figure className={styles.experienceFigure}>
           <Image
-            src="/images/experience.png"
-            alt=""
-            fill
-            sizes="(max-width: 402px) 70vw, 278px"
+            className={styles.experienceImage}
+            src="/images/ghost-rider.png"
+            alt="Ghost Rider on a horse"
+            width={883}
+            height={1024}
+            sizes="(max-width: 402px) 68vw, 274px"
           />
-        </div>
+          <figcaption className={styles.caption}>
+            <span className={styles.captionTitle}>TOTALLY IRRELEVENT !</span>
+            <span className={styles.captionText}>
+              but its a GHOST RIDER ON A HORSE sooooooooo...
+            </span>
+          </figcaption>
+        </figure>
         <h2 className={styles.display}>RELEVANT EXPERIENCE</h2>
         <h3 className={styles.role}>DevOps Engineer</h3>
         <div className={styles.roleMeta}>

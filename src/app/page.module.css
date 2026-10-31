@@ -8,37 +8,32 @@
   width: calc(402 * var(--u));
   margin: 0 auto;
   padding-bottom: calc(81 * var(--u));
+  overflow-x: clip;
   letter-spacing: -0.07em;
 }
 
 /* ---------- Hero ---------- */
 
 .hero {
-  padding: calc(75 * var(--u)) calc(31 * var(--u)) 0;
+  padding: calc(92 * var(--u)) calc(31 * var(--u)) 0;
 }
 
 .heroImage {
-  position: relative;
-  width: calc(278 * var(--u));
-  height: calc(278 * var(--u));
+  width: calc(323 * var(--u));
+  height: calc(323 * var(--u));
   margin: 0 auto;
-  border-radius: calc(30 * var(--u));
-  overflow: hidden;
 }
 
-/* Figma crop: image is full width, 177.78% tall, shifted up 37.41% */
 .heroImage img {
-  position: absolute;
-  left: 0;
-  top: -37.41%;
+  display: block;
   width: 100%;
-  height: 177.78%;
-  max-width: none;
+  height: 100%;
+  object-fit: cover;
 }
 
 .display {
   width: calc(340 * var(--u));
-  margin-top: calc(95 * var(--u));
+  margin-top: calc(39 * var(--u));
   font-size: calc(48.329 * var(--u));
   font-weight: 600;
   line-height: 0.8066;
@@ -159,21 +154,44 @@
 /* ---------- Experience ---------- */
 
 .experience {
-  padding: calc(137.8 * var(--u)) calc(31 * var(--u)) 0;
+  padding: calc(80.8 * var(--u)) calc(31 * var(--u)) 0;
 }
 
 .experienceImage {
-  position: relative;
-  width: calc(278 * var(--u));
-  height: calc(278 * var(--u));
+  display: block;
+  width: calc(273.995 * var(--u));
+  height: calc(317.906 * var(--u));
   margin: 0 auto;
-  border-radius: calc(30 * var(--u));
-  overflow: hidden;
+  object-fit: cover;
 }
 
-.experienceImage img {
-  object-fit: cover;
-  opacity: 0.7;
+/* Black caption tag, bleeds off the right edge of the frame (clipped by .page) */
+.caption {
+  display: flex;
+  flex-direction: column;
+  width: calc(269.065 * var(--u));
+  height: calc(36.266 * var(--u));
+  margin: calc(40.474 * var(--u)) 0 0 calc(121.43 * var(--u));
+  padding: calc(5.29 * var(--u)) 0 0 calc(3.57 * var(--u));
+  background: #000;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.202;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.captionTitle {
+  font-size: calc(9.849 * var(--u));
+}
+
+.captionText {
+  font-size: calc(11.728 * var(--u));
+}
+
+.experience .display {
+  margin-top: calc(35.354 * var(--u));
 }
 
 .role {
